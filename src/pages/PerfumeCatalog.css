@@ -1,0 +1,357 @@
+.catalog-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.catalog-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #f4a261;
+    margin-bottom: 20px;
+}
+
+.catalog-filters {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+}
+
+.catalog-filters input,
+.catalog-filters select {
+    padding: 10px 15px;
+    border: 2px solid #f4a261;
+    border-radius: 5px;
+    background-color: #1e1e1e;
+    color: #fff;
+    font-size: 16px;
+    min-width: 150px;
+    width: 150px;
+}
+
+.catalog-filters input:focus,
+.catalog-filters select:focus {
+    outline: none;
+    border-color: #e76f51;
+}
+
+.catalog-filters input.catalog-search {
+    padding: 10px 15px;
+    border: 2px solid #f4a261;
+    border-radius: 5px;
+    background-color: #1e1e1e;
+    color: #fff;
+    font-size: 16px;
+    min-width: 150px;
+    width: 150px;
+}
+
+.catalog-filters input.catalog-search:focus {
+    outline: none;
+    border-color: #e76f51;
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    padding: 0;
+    list-style: none;
+    justify-content: center;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.catalog-item {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 450px;
+    margin: 5px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+}
+
+.catalog-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.catalog-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    object-fit: contain;
+    max-height: 300px;
+    margin-top: 70px;
+    height: 250px;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.catalog-item:not(:first-child) .catalog-image {
+    margin-top: 70px;
+    height: 250px;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.catalog-item[data-perfume-name="Angels Share"] .catalog-image {
+    width: 150px;
+    height: 200px;
+    object-fit: contain;
+    margin-top: 95px;
+}
+
+.catalog-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f4a261;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+}
+
+.catalog-rating {
+    font-size: 16px;
+    color: #ffd700;
+    position: absolute;
+    top: 88%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.catalog-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.catalog-item a:hover {
+    text-decoration: none;
+}
+
+.catalog-notes-select {
+    padding: 10px 15px;
+    border: 2px solid #f4a261;
+    border-radius: 5px;
+    background-color: #1e1e1e;
+    color: #fff;
+    font-size: 16px;
+    min-width: 200px;
+    height: auto;
+    min-height: 100px;
+}
+
+.catalog-notes-select option {
+    padding: 5px;
+}
+
+.catalog-notes-select option:checked {
+    background-color: #f4a261;
+    color: #1e1e1e;
+}
+
+.notes-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.notes-button {
+    padding: 10px 15px;
+    border: 2px solid #f4a261;
+    border-radius: 5px;
+    background-color: #1e1e1e;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    min-width: 200px;
+}
+
+.notes-button:hover {
+    background-color: #2a2a2a;
+}
+
+.notes-filter-container {
+    display: none;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1e1e1e;
+    border: 2px solid #f4a261;
+    border-radius: 5px;
+    padding: 4px;
+    z-index: 1000;
+    min-width: 220px;
+    width: 220px;
+}
+
+.notes-filter-container::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    height: 20px;
+}
+
+.notes-dropdown:hover .notes-filter-container {
+    display: block;
+}
+
+.catalog-note-item {
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    color: #fff;
+    cursor: pointer;
+    background-color: #2a2a2a;
+    border-radius: 2px;
+    margin: 0;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+
+.catalog-note-item:hover {
+    background-color: #3a3a3a;
+}
+
+.catalog-note-item input[type="checkbox"] {
+    display: none;
+}
+
+.catalog-note-text {
+    font-size: 13px;
+    color: #fff;
+    flex: 1;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 190px;
+    line-height: 1;
+    display: inline-block;
+}
+
+.catalog-note-item input[type="checkbox"]:checked + .catalog-note-text {
+    color: #f4a261;
+    font-weight: bold;
+}
+
+.catalog-note-item input[type="checkbox"]:checked {
+    background-color: rgba(244, 162, 97, 0.2);
+}
+
+/* Style for selected notes */
+.note-checkbox input[type="checkbox"]:checked {
+    background-color: rgba(244, 162, 97, 0.2);
+}
+
+/* Scrollbar styles */
+.notes-grid::-webkit-scrollbar {
+    width: 8px;
+}
+
+.notes-grid::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+.notes-grid::-webkit-scrollbar-thumb {
+    background: #f4a261;
+    border-radius: 4px;
+}
+
+.notes-grid::-webkit-scrollbar-thumb:hover {
+    background: #e76f51;
+}
+
+/* Adjust the brand select box width */
+.catalog-filters select[name="brand"] {
+    min-width: 180px;
+    width: 180px;
+}
+
+.catalog-filters select[name="gender"] {
+    min-width: 150px;
+    width: 150px;
+}
+
+.catalog-notes-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1px;
+    max-height: 250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 2px;
+    background-color: #1e1e1e;
+}
+
+.catalog-note-item {
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    color: #fff;
+    cursor: pointer;
+    background-color: #2a2a2a;
+    border-radius: 2px;
+    margin: 0;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+
+.catalog-note-text {
+    font-size: 13px;
+    color: #fff;
+    flex: 1;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 190px;
+    line-height: 1;
+    display: inline-block;
+}
+
+.favorite-notes-btn {
+    padding: 10px 15px;
+    border: 2px solid #f4a261;
+    border-radius: 5px;
+    background-color: #1e1e1e;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    min-width: 200px;
+    transition: all 0.3s ease;
+}
+
+.favorite-notes-btn:hover {
+    background-color: #2a2a2a;
+}
+
+.favorite-notes-btn.active {
+    background-color: #f4a261;
+    color: #1e1e1e;
+}
+

@@ -1,0 +1,144 @@
+.celebrity-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.celebrity-title {
+    color: #f4a261;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.celebrity-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.celebrity-card {
+    display: flex;
+    align-items: flex-start;
+    background-color: #2a2a2a;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.celebrity-card:hover {
+    transform: translateY(-5px);
+}
+
+.celebrity-image-container {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin-right: 20px;
+    border-radius: 50%;
+    border: 3px solid #f4a261;
+    flex-shrink: 0;
+}
+
+.celebrity-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.celebrity-info {
+    flex: 1;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.celebrity-text {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.celebrity-name {
+    color: #f4a261;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.celebrity-occupation {
+    color: #888;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.celebrity-description {
+    color: #ddd;
+    line-height: 1.6;
+}
+
+.celebrity-perfumes {
+    width: auto;
+    margin-top: -30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.celebrity-perfumes h3 {
+    color: #f4a261;
+    margin-bottom: 15px;
+}
+
+.perfume-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px 0;
+    justify-content: flex-end;
+}
+
+.celebrity-perfume-item {
+    flex: 0 0 150px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.celebrity-perfume-item:hover {
+    transform: translateY(-5px);
+}
+
+.celebrity-perfume-item img {
+    width: 120px;
+    height: 160px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.celebrity-perfume-item p {
+    color: #ddd;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.celebrity-perfume-item:hover img {
+    box-shadow: 0 4px 8px rgba(244, 162, 97, 0.2);
+}
+
+.loading {
+    text-align: center;
+    color: #f4a261;
+    font-size: 1.2rem;
+    padding: 50px;
+} 

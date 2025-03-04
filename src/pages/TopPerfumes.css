@@ -1,0 +1,110 @@
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #111;
+    color: #fff;
+}
+
+/* Container pentru pagina Top Perfumes */
+.top-perfumes-container {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Titlul paginii */
+.top-perfumes-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #f4a261;
+    margin-bottom: 20px;
+}
+
+/* Lista parfumurilor */
+.perfumes-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+    justify-content: center;
+}
+
+/* Card pentru fiecare parfum */
+.perfume-card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 450px;
+    margin: 10px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.perfume-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Imaginea parfumului */
+.perfume-image {
+    width: auto;
+    height: 250px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-top: 70px;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.perfume-card[data-perfume-name="Angels Share"] .perfume-image,
+.perfume-card[data-perfume-name="Black Phantom"] .perfume-image {
+    width: auto;
+    height: 200px;
+    margin-top: 95px;
+}
+
+/* Titlul parfumului */
+.perfume-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f4a261;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-decoration: none !important;
+}
+
+.perfume-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.perfume-card a:hover {
+    text-decoration: none;
+    color: #ffd700;
+}
+
+/* Rating-ul parfumului */
+.perfume-rating {
+    font-size: 16px;
+    color: #ffd700;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-decoration: none !important;
+}
+
+
